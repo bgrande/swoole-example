@@ -1,0 +1,22 @@
+{
+  "name": "bgrande/swooletest",
+  "description": "swoole test project",
+  "minimum-stability": "stable",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "benedikt",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "php": "~7.4 || ~8.0",
+    "ext-json": "*",
+    "ext-pdo": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "SwooleTest\\": "src"
+    }
+  }
+}
