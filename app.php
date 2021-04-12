@@ -20,7 +20,7 @@ $server->set([
 ]);
 
 $server->on("start", function (Server $server) {
-    echo "Swoole http server has been started at: htt://0.0.0.0:8080\n";
+    echo "Swoole http server has been started at: http://0.0.0.0:8080\n";
 });
 
 $languageList = ['java', 'css', 'go', 'javascript', 'typescript', 'rust', 'php', 'swoole', 'html', 'sql'];
@@ -49,6 +49,8 @@ $server->on("request", function (Request $request, Response $response) use ($get
     ];
 
     $response->end(json_encode($result));
+
+    // this is simple logging
     echo "we did a response";
 });
 
