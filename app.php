@@ -39,7 +39,7 @@ $getLang = static function ($list) {
     return $active;
 };
 
-$server->on("request", function (Request $request, Response $response) use ($getLang, $languageList, $server) {
+$server->on("request", function (Request $request, Response $response) use ($getLang, $languageList) {
     $response->header('Connection', 'close');
     $response->header('Content-Type', 'application/json');
 
