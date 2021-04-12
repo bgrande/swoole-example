@@ -43,11 +43,9 @@ $server->on("request", function (Request $request, Response $response) use ($get
     $response->header('Connection', 'close');
     $response->header('Content-Type', 'application/json');
 
-    $currentList = $getLang($languageList);
-
     $result = [
         'message' => 'The languages of the day are',
-        'list' => $currentList
+        'list' => $getLang($languageList)
     ];
 
     $response->end(json_encode($result));
