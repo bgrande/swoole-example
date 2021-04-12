@@ -49,9 +49,6 @@ $server->on("request", function (Request $request, Response $response) use ($get
     ];
 
     $response->end(json_encode($result));
-
-    // this is simple logging
-    echo "we did a response";
 });
 
 $server->start();
